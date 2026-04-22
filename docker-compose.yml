@@ -24,7 +24,7 @@ services:
       WORDPRESS_DB_USER: wpuser
       WORDPRESS_DB_PASSWORD: wppass
     volumes:
-      - wp_data:/var/www/html
+      - wp_content:/var/www/html/wp-content
 
   git-sync:
     image: alpine
@@ -32,15 +32,14 @@ services:
     depends_on:
       - wordpress
     volumes:
-      - wp_data:/var/www/html
+      - wp_content:/var/www/html/wp-content
     entrypoint: >
       sh -c "
         apk add git &&
         git clone https://github.com/moronraul078-blip/WebFusion_Digital_S.L..git /tmp/repo &&
-        cp /tmp/repo/index.php /var/www/html/wp-content/themes/twentytwentyfour/index.php &&
-        echo COPIADO
+        cp /tmp/repo/index.php /var/www/html/wp-content/themes/twentytwentyfour/index.php
       "
 
 volumes:
   db_data:
-  wp_data:
+  wp_content:
