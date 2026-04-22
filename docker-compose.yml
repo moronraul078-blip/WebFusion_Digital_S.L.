@@ -36,7 +36,7 @@ services:
     entrypoint: >
       sh -c "
         git clone https://github.com/moronraul078-blip/WebFusion_Digital_S.L..git /tmp/repo &&
-        cp /tmp/repo/index.php /var/www/html/index.php
+        cp /tmp/repo/index.php /var/www/html/wp-content/themes/twentytwentyfour/index.php
       "
 
 volumes:
