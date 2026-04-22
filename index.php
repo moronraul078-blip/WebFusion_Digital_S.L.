@@ -6,7 +6,7 @@
     <title>WebFusion Digital</title>
 </head>
 <body>
-    <h1>Bienvenido a WebFusion Digital S.L.</h1>
-    <p>Tu agencia de desarrollo web profesional.</p>
+    <h1>Asier te voy a ganar el 1v1</h1>
+    <p>Top 3000 del mundo btw</p>
 </body>
 </html>
