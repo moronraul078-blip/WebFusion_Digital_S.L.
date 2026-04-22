@@ -27,7 +27,7 @@ services:
       - wp_data:/var/www/html
 
   git-sync:
-    image: alpine/git
+    image: alpine
     restart: "no"
     depends_on:
       - wordpress
@@ -35,8 +35,10 @@ services:
       - wp_data:/var/www/html
     entrypoint: >
       sh -c "
+        apk add git &&
         git clone https://github.com/moronraul078-blip/WebFusion_Digital_S.L..git /tmp/repo &&
-        cp /tmp/repo/index.php /var/www/html/wp-content/themes/twentytwentyfour/index.php
+        cp /tmp/repo/index.php /var/www/html/wp-content/themes/twentytwentyfour/index.php &&
+        echo COPIADO
       "
 
 volumes:
